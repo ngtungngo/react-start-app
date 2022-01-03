@@ -15,3 +15,6 @@ git push -u origin main
 ```
 yarn add styled-components
 ```
+
+### Library empfehlung:
+https://rsuitejs.com/components/date-picker/

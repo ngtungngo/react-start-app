@@ -1,12 +1,15 @@
 import * as React from 'react';
 import { Hello } from '../components/Hello';
-import { TopNavi } from '../components/TopNavi';
+import { Page } from '../components/Page';
+import { MainContainer } from '../globalstyles';
+
 export const Dashboard = () => {
     return (
-      <div>
-        <TopNavi />
-        <p>React-kickstart with parcel and typescript</p>
-        <Hello compiler="Parcel" framework="123" />
-      </div>
+      <Page>
+        <MainContainer>
+          <p>React-kickstart with parcel and typescript</p>
+          <Hello compiler="Parcel" framework="123" />
+        </MainContainer>
+      </Page>
     );
 };

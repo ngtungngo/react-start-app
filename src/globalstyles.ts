@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   #app {
-    margin-top: 64px;
+    margin-top: 4rem;
     height: calc(100vh - 64px);
     width: 100vw;
     overflow-y: scroll;
@@ -22,5 +22,6 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const MainContainer = styled.div`
+  background-color: ${(props) => props.theme.colors.surface};
   padding: 25px;
-`
+`;
