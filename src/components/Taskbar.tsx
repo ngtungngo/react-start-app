@@ -48,6 +48,55 @@ const TaskbarContainer = styled.nav`
   .center {
     flex: 0 0 160px;
   }
+
+  @media screen and (max-width: 1200px) {
+    .center {
+      display: none;
+    }
+
+    .left .right {
+      flex-basis: 50%;
+      flex-shrink: 1;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .username {
+      display: flex;
+      margin-right: 15px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .app-icon {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    body {
+      margin-bottom: 64px;
+    }
+
+    .right {
+      position: fixed;
+      background: ${({ theme }) => theme.colors.surface};
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid ${({ theme }) => theme.colors.background};
+    }
+
+    .right .action-area {
+      flex: 1 0 100%;
+    }
+
+    .right .action-area > * {
+      flex-grow: 1;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 `;
 
 const getClockData = () => {
