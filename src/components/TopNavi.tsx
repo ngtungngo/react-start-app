@@ -1,6 +1,7 @@
-
+import { useMenu } from '../hooks/hooks';
 import * as React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const NaviContainer = styled.div`
   background-color: rgb(255, 255, 255);
@@ -35,16 +36,50 @@ const NaviContainer = styled.div`
     font-weight: 400;
   }
 
+  .active {
+    background: ${(props) => props.theme.colors.selected_lighten};
+    color: ${(props) => props.theme.colors.selected};
+    font-weight: bold;
+    border-bottom: 0.125rem solid #094a9b;
+  }
+
   a:hover {
     background-color: #c6c6c6;
   }
 `;
 
 export const TopNavi = () => {
+  const { currentPage, setCurrentPage } = useMenu();
+  const navigate = useNavigate();
+  React.useEffect(() => {
+    if (!currentPage) {
+      setCurrentPage('dashboard');
+    }
+  }, []);
+  const handleSetActive = (page) => (e) => {
+    e && e.preventDefault();
+    setCurrentPage(page);
+    navigate(`/${page.toLowerCase().replace(' ', '-')}`);
+  };
+  
   return (
     <NaviContainer>
-      <a href="/dashboard">Dashboard</a>
-      <a href="/reports">Reports</a>
+      <a
+        target="_selft"
+        href="#"
+        className={!currentPage || currentPage == 'dashboard' ? 'active' : ''}
+        onClick={handleSetActive('dashboard')}
+      >
+        Dashboard
+      </a>
+      <a
+        target="_selft"
+        href="#"
+        className={currentPage == 'reports' ? 'active' : ''}
+        onClick={handleSetActive('reports')}
+      >
+        Reports
+      </a>
     </NaviContainer>
   );
 };
