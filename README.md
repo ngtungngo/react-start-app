@@ -1,7 +1,8 @@
 # react-start-app
 
 ## What is this?
-This repository is a react project that create a start-app use https://pagepro.co/blog/building-app-with-react-typescript-and-parcel/
+This repository is a react project that create a start-app.
+This projects uses [parcel](https://parceljs.org/) and created with help from [blog](https://pagepro.co/blog/building-app-with-react-typescript-and-parcel/)
 
 ## Local development
 ```sh
