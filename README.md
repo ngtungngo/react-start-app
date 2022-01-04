@@ -1,6 +1,16 @@
 # react-start-app
-## React with parcel:
-https://pagepro.co/blog/building-app-with-react-typescript-and-parcel/
+
+## What is this?
+This repository is a react project that create a start-app use https://pagepro.co/blog/building-app-with-react-typescript-and-parcel/
+
+## Local development
+```sh
+git clone git@github.com:ngtungngo/react-start-app.git
+cd react-start-app
+yarn install
+yarn start
+open http://localhost:1234
+```
 ## Git:
 ```
 echo "# react-start-app" >> README.md
