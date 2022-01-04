@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 import { Dashboard } from './containers/Dashboard';
 import { Reports } from './containers/Reports';
-import { GlobalStyles} from './globalstyles';
-import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './globalstyles';
+import { DarkModeContext, MenuContext } from './hooks/hooks';
 import darkTheme from './themes/dark';
 import lightTheme from './themes/light';
-import { DarkModeContext, MenuContext } from './hooks/hooks';
 
 export const App = () => {
   const [isDarkMode, setIsDarkMode] = React.useState<boolean | undefined>(
