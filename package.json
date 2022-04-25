@@ -9,7 +9,7 @@
     "build": "parcel build src/index.html"
   },
   "dependencies": {
-    "@types/react": "^17.0.38",
+    "@types/react": "^18.0.0",
     "@types/react-dom": "^17.0.11",
     "Router": "^2.1.0",
     "components": "^0.1.0",
