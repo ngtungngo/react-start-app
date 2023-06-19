@@ -9,13 +9,13 @@
     "build": "parcel build src/index.html"
   },
   "dependencies": {
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "Router": "^2.1.0",
     "components": "^0.1.0",
     "hooks": "^0.3.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-router-dom": "^6.2.1",
     "styled-components": "^5.3.3",
     "tslib": "^2.3.1"
